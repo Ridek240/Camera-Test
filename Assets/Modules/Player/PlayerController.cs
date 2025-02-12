@@ -37,7 +37,7 @@ public class PlayerController : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         Vector3 direction;
         Vector3 worldPosition;
@@ -60,6 +60,7 @@ public class PlayerController : MonoBehaviour
             yMovement = MovementVector.x * -10;
             Debug.Log("C");
         }*/
+        
         rigidbody.linearVelocity = (new Vector3(MovementVector.y, rigidbody.linearVelocity.y, -MovementVector.x)*10);
         //rigidbody.linearVelocity = (new Vector3(xMovement, rigidbody.linearVelocity.y, yMovement));
         if(!ControllerConected)
